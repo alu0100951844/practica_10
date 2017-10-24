@@ -54,6 +54,15 @@ describe Alimentos do
              expect(@alimento_4.proteinas).to eq(@Ternera[1])
              expect(@alimento_5.proteinas).to eq(@Pollo[1]) 
          end
+         
+         it "Se almacenan correctamente las cantidades de glucidos de los alimentos" do
+             expect(@alimento_0.glucidos).to eq(@Huevo_frito[2])
+             expect(@alimento_1.glucidos).to eq(@Leche_vaca[2])
+             expect(@alimento_2.glucidos).to eq(@Yogurt[2])
+             expect(@alimento_3.glucidos).to eq(@Cerdo[2])
+             expect(@alimento_4.glucidos).to eq(@Ternera[2])
+             expect(@alimento_5.glucidos).to eq(@Pollo[2])
+         end
     end
    
 end
