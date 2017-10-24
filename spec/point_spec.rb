@@ -45,6 +45,15 @@ describe Alimentos do
              expect(@alimento_4.nombre).to eq(@Ternera[0])
              expect(@alimento_5.nombre).to eq(@Pollo[0])
          end
+         
+         it "Se almacenan correctamente las cantidades de proteinas de los alimentos" do
+             expect(@alimento_0.nombre).to eq(@Huevo_frito[1])
+             expect(@alimento_1.nombre).to eq(@Leche_vaca[1])
+             expect(@alimento_2.nombre).to eq(@Yogurt[1])
+             expect(@alimento_3.nombre).to eq(@Cerdo[1])
+             expect(@alimento_4.nombre).to eq(@Ternera[1])
+             expect(@alimento_5.nombre).to eq(@Pollo[1]) 
+         end
     end
    
 end
