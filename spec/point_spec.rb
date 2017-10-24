@@ -35,70 +35,73 @@ describe Alimentos do
       @alimento_5=Alimentos.new(@Pollo)
    end
    
-    describe "# almacenamiento de datos del alimento" do
+    context "Si se indican los datos de los alimentos." do 
+    	
+       describe "# almacenamiento de datos del alimento" do
    	
-         it "Se almacenan correctamente los nombres de los alimentos" do
-             expect(@alimento_0.nombre).to eq(@Huevo_frito[0])
-             expect(@alimento_1.nombre).to eq(@Leche_vaca[0])
-             expect(@alimento_2.nombre).to eq(@Yogurt[0])
-             expect(@alimento_3.nombre).to eq(@Cerdo[0])
-             expect(@alimento_4.nombre).to eq(@Ternera[0])
-             expect(@alimento_5.nombre).to eq(@Pollo[0])
-         end
+            it "Se almacenan correctamente los nombres de los alimentos" do
+                expect(@alimento_0.nombre).to eq(@Huevo_frito[0])
+                expect(@alimento_1.nombre).to eq(@Leche_vaca[0])
+                expect(@alimento_2.nombre).to eq(@Yogurt[0])
+                expect(@alimento_3.nombre).to eq(@Cerdo[0])
+                expect(@alimento_4.nombre).to eq(@Ternera[0])
+                expect(@alimento_5.nombre).to eq(@Pollo[0])
+            end
          
-         it "Se almacenan correctamente las cantidades de proteinas de los alimentos" do
-             expect(@alimento_0.proteinas).to eq(@Huevo_frito[1])
-             expect(@alimento_1.proteinas).to eq(@Leche_vaca[1])
-             expect(@alimento_2.proteinas).to eq(@Yogurt[1])
-             expect(@alimento_3.proteinas).to eq(@Cerdo[1])
-             expect(@alimento_4.proteinas).to eq(@Ternera[1])
-             expect(@alimento_5.proteinas).to eq(@Pollo[1]) 
-         end
+            it "Se almacenan correctamente las cantidades de proteinas de los alimentos" do
+                expect(@alimento_0.proteinas).to eq(@Huevo_frito[1])
+                expect(@alimento_1.proteinas).to eq(@Leche_vaca[1])
+                expect(@alimento_2.proteinas).to eq(@Yogurt[1])
+                expect(@alimento_3.proteinas).to eq(@Cerdo[1])
+                expect(@alimento_4.proteinas).to eq(@Ternera[1])
+                expect(@alimento_5.proteinas).to eq(@Pollo[1]) 
+            end
          
-         it "Se almacenan correctamente las cantidades de glucidos de los alimentos" do
-             expect(@alimento_0.glucidos).to eq(@Huevo_frito[2])
-             expect(@alimento_1.glucidos).to eq(@Leche_vaca[2])
-             expect(@alimento_2.glucidos).to eq(@Yogurt[2])
-             expect(@alimento_3.glucidos).to eq(@Cerdo[2])
-             expect(@alimento_4.glucidos).to eq(@Ternera[2])
-             expect(@alimento_5.glucidos).to eq(@Pollo[2])
-         end
+            it "Se almacenan correctamente las cantidades de glucidos de los alimentos" do
+                expect(@alimento_0.glucidos).to eq(@Huevo_frito[2])
+                expect(@alimento_1.glucidos).to eq(@Leche_vaca[2])
+                expect(@alimento_2.glucidos).to eq(@Yogurt[2])
+                expect(@alimento_3.glucidos).to eq(@Cerdo[2])
+                expect(@alimento_4.glucidos).to eq(@Ternera[2])
+                expect(@alimento_5.glucidos).to eq(@Pollo[2])
+            end
          
-         it "Se almacenan correctamente las cantidades de lípidos de los alimentos" do
-             expect(@alimento_0.lipidos).to eq(@Huevo_frito[3])
-             expect(@alimento_1.lipidos).to eq(@Leche_vaca[3])
-             expect(@alimento_2.lipidos).to eq(@Yogurt[3])
-             expect(@alimento_3.lipidos).to eq(@Cerdo[3])
-             expect(@alimento_4.lipidos).to eq(@Ternera[3])
-             expect(@alimento_5.lipidos).to eq(@Pollo[3]) 
-         end
-         
-    end
-    
-    describe "# Formateo de los datos del alimento" do
-  	 
-       it "Se muestran correctamente los datos de los alimentos." do
-             expect(@alimento_0.to_s).to eq("Nombre del alimento: #{@Huevo_frito[0]}  Proteínas: #{@Huevo_frito[1]}g  Glúcidos: #{@Huevo_frito[2]}g  Lípidos: #{@Huevo_frito[3]}g")
-             expect(@alimento_1.to_s).to eq("Nombre del alimento: #{@Leche_vaca[0]}  Proteínas: #{@Leche_vaca[1]}g  Glúcidos: #{@Leche_vaca[2]}g  Lípidos: #{@Leche_vaca[3]}g")
-             expect(@alimento_2.to_s).to eq("Nombre del alimento: #{@Yogurt[0]}  Proteínas: #{@Yogurt[1]}g  Glúcidos: #{@Yogurt[2]}g  Lípidos: #{@Yogurt[3]}g")
-             expect(@alimento_3.to_s).to eq("Nombre del alimento: #{@Cerdo[0]}  Proteínas: #{@Cerdo[1]}g  Glúcidos: #{@Cerdo[2]}g  Lípidos: #{@Cerdo[3]}g")
-             expect(@alimento_4.to_s).to eq("Nombre del alimento: #{@Ternera[0]}  Proteínas: #{@Ternera[1]}g  Glúcidos: #{@Ternera[2]}g  Lípidos: #{@Ternera[3]}g")
-             expect(@alimento_5.to_s).to eq("Nombre del alimento: #{@Pollo[0]}  Proteínas: #{@Pollo[1]}g  Glúcidos: #{@Pollo[2]}g  Lípidos: #{@Pollo[3]}g")
+            it "Se almacenan correctamente las cantidades de lípidos de los alimentos" do
+                expect(@alimento_0.lipidos).to eq(@Huevo_frito[3])
+                expect(@alimento_1.lipidos).to eq(@Leche_vaca[3])
+                expect(@alimento_2.lipidos).to eq(@Yogurt[3])
+                expect(@alimento_3.lipidos).to eq(@Cerdo[3])
+                expect(@alimento_4.lipidos).to eq(@Ternera[3])
+                expect(@alimento_5.lipidos).to eq(@Pollo[3]) 
+            end
        end
-      
     end
     
-    describe "# valor energetico del alimento" do
+    context "Si están definidos los métodos en la clase Alimentos" do
+    
+        describe "# Formateo de los datos del alimento" do
+  	 
+            it "Se muestran correctamente los datos de los alimentos." do
+                expect(@alimento_0.to_s).to eq("Nombre del alimento: #{@Huevo_frito[0]}  Proteínas: #{@Huevo_frito[1]}g  Glúcidos: #{@Huevo_frito[2]}g  Lípidos: #{@Huevo_frito[3]}g")
+                expect(@alimento_1.to_s).to eq("Nombre del alimento: #{@Leche_vaca[0]}  Proteínas: #{@Leche_vaca[1]}g  Glúcidos: #{@Leche_vaca[2]}g  Lípidos: #{@Leche_vaca[3]}g")
+                expect(@alimento_2.to_s).to eq("Nombre del alimento: #{@Yogurt[0]}  Proteínas: #{@Yogurt[1]}g  Glúcidos: #{@Yogurt[2]}g  Lípidos: #{@Yogurt[3]}g")
+                expect(@alimento_3.to_s).to eq("Nombre del alimento: #{@Cerdo[0]}  Proteínas: #{@Cerdo[1]}g  Glúcidos: #{@Cerdo[2]}g  Lípidos: #{@Cerdo[3]}g")
+                expect(@alimento_4.to_s).to eq("Nombre del alimento: #{@Ternera[0]}  Proteínas: #{@Ternera[1]}g  Glúcidos: #{@Ternera[2]}g  Lípidos: #{@Ternera[3]}g")
+                expect(@alimento_5.to_s).to eq("Nombre del alimento: #{@Pollo[0]}  Proteínas: #{@Pollo[1]}g  Glúcidos: #{@Pollo[2]}g  Lípidos: #{@Pollo[3]}g")
+            end
+      
+        end
+    
+       describe "# valor energetico del alimento" do
          
-         it "Se calcula correctamente el valor energético de los alimentos" do
-             expect(@alimento_0.valor_energetico).to eq(@Huevo_frito[1]*4+@Huevo_frito[2]*4+@Huevo_frito[3]*9)
-             expect(@alimento_1.valor_energetico).to eq(@Leche_vaca[1]*4+@Leche_vaca[2]*4+@Leche_vaca[3]*9)
-             expect(@alimento_2.valor_energetico).to eq(@Yogurt[1]*4+@Yogurt[2]*4+@Yogurt[3]*9)
-             expect(@alimento_3.valor_energetico).to eq(@Cerdo[1]*4+@Cerdo[2]*4+@Cerdo[3]*9)
-             expect(@alimento_4.valor_energetico).to eq(@Ternera[1]*4+@Ternera[2]*4+@Ternera[3]*9)
-             expect(@alimento_5.valor_energetico).to eq(@Pollo[1]*4+@Pollo[2]*4+@Pollo[3]*9)
-         end
-        
-   end
-   
+            it "Se calcula correctamente el valor energético de los alimentos" do
+                expect(@alimento_0.valor_energetico).to eq(@Huevo_frito[1]*4+@Huevo_frito[2]*4+@Huevo_frito[3]*9)
+                expect(@alimento_1.valor_energetico).to eq(@Leche_vaca[1]*4+@Leche_vaca[2]*4+@Leche_vaca[3]*9)
+                expect(@alimento_2.valor_energetico).to eq(@Yogurt[1]*4+@Yogurt[2]*4+@Yogurt[3]*9)
+                expect(@alimento_3.valor_energetico).to eq(@Cerdo[1]*4+@Cerdo[2]*4+@Cerdo[3]*9)
+                expect(@alimento_4.valor_energetico).to eq(@Ternera[1]*4+@Ternera[2]*4+@Ternera[3]*9)
+                expect(@alimento_5.valor_energetico).to eq(@Pollo[1]*4+@Pollo[2]*4+@Pollo[3]*9)
+            end
+        end
+    end
 end
