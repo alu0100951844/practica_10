@@ -72,6 +72,20 @@ describe Alimentos do
              expect(@alimento_4.lipidos).to eq(@Ternera[3])
              expect(@alimento_5.lipidos).to eq(@Pollo[3]) 
          end
+         
     end
+    
+    describe "# Formateo de los datos del alimento" do
+  	 
+       it "Se muestran correctamente los datos de los alimentos." do
+             expect(@alimento_0.to_s).to eq("Nombre del alimento: #{@Huevo_frito[0]}  Proteínas: #{@Huevo_frito[1]}g  Glúcidos: #{@Huevo_frito[2]}g  Lípidos: #{@Huevo_frito[3]}g")
+             expect(@alimento_1.to_s).to eq("Nombre del alimento: #{@Leche_vaca[0]}  Proteínas: #{@Leche_vaca[1]}g  Glúcidos: #{@Leche_vaca[2]}g  Lípidos: #{@Leche_vaca[3]}g")
+             expect(@alimento_2.to_s).to eq("Nombre del alimento: #{@Yogurt[0]}  Proteínas: #{@Yogurt[1]}g  Glúcidos: #{@Yogurt[2]}g  Lípidos: #{@Yogurt[3]}g")
+             expect(@alimento_3.to_s).to eq("Nombre del alimento: #{@Cerdo[0]}  Proteínas: #{@Cerdo[1]}g  Glúcidos: #{@Cerdo[2]}g  Lípidos: #{@Cerdo[3]}g")
+             expect(@alimento_4.to_s).to eq("Nombre del alimento: #{@Ternera[0]}  Proteínas: #{@Ternera[1]}g  Glúcidos: #{@Ternera[2]}g  Lípidos: #{@Ternera[3]}g")
+             expect(@alimento_5.to_s).to eq("Nombre del alimento: #{@Pollo[0]}  Proteínas: #{@Pollo[1]}g  Glúcidos: #{@Pollo[2]}g  Lípidos: #{@Pollo[3]}g")
+       end
+      
+   end
    
 end
