@@ -10,4 +10,8 @@ class Alimentos
        @lipidos = datos_alimento[3]
     end
     
+    def to_s
+      "Nombre del alimento: #{@nombre}  Proteínas: #{@proteinas}g  Glúcidos: #{@glucidos}g  Lípidos: #{@lipidos}g"
+    end
+    
 end
