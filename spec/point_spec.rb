@@ -86,6 +86,19 @@ describe Alimentos do
              expect(@alimento_5.to_s).to eq("Nombre del alimento: #{@Pollo[0]}  Proteínas: #{@Pollo[1]}g  Glúcidos: #{@Pollo[2]}g  Lípidos: #{@Pollo[3]}g")
        end
       
+    end
+    
+    describe "# valor energetico del alimento" do
+         
+         it "Se calcula correctamente el valor energético de los alimentos" do
+             expect(@alimento_0.valor_energetico).to eq(@Huevo_frito[1]*4+@Huevo_frito[2]*4+@Huevo_frito[3]*9)
+             expect(@alimento_1.valor_energetico).to eq(@Leche_vaca[1]*4+@Leche_vaca[2]*4+@Leche_vaca[3]*9)
+             expect(@alimento_2.valor_energetico).to eq(@Yogurt[1]*4+@Yogurt[2]*4+@Yogurt[3]*9)
+             expect(@alimento_3.valor_energetico).to eq(@Cerdo[1]*4+@Cerdo[2]*4+@Cerdo[3]*9)
+             expect(@alimento_4.valor_energetico).to eq(@Ternera[1]*4+@Ternera[2]*4+@Ternera[3]*9)
+             expect(@alimento_5.valor_energetico).to eq(@Pollo[1]*4+@Pollo[2]*4+@Pollo[3]*9)
+         end
+        
    end
    
 end
