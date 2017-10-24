@@ -63,6 +63,15 @@ describe Alimentos do
              expect(@alimento_4.glucidos).to eq(@Ternera[2])
              expect(@alimento_5.glucidos).to eq(@Pollo[2])
          end
+         
+         it "Se almacenan correctamente las cantidades de lípidos de los alimentos" do
+             expect(@alimento_0.lipidos).to eq(@Huevo_frito[3])
+             expect(@alimento_1.lipidos).to eq(@Leche_vaca[3])
+             expect(@alimento_2.lipidos).to eq(@Yogurt[3])
+             expect(@alimento_3.lipidos).to eq(@Cerdo[3])
+             expect(@alimento_4.lipidos).to eq(@Ternera[3])
+             expect(@alimento_5.lipidos).to eq(@Pollo[3]) 
+         end
     end
    
 end
