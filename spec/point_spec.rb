@@ -26,4 +26,8 @@ describe Alimentos do
       
    end
    
+   before :each do
+      @alimento=Alimentos.new
+   end
+   
 end
