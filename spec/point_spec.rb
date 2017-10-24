@@ -27,8 +27,24 @@ describe Alimentos do
    end
    
    before :each do
-   	  @alimento_selec=@Huevo_frito
-      @alimento=Alimentos.new(@alimento_selec)
+      @alimento_0=Alimentos.new(@Huevo_frito)
+      @alimento_1=Alimentos.new(@Leche_vaca)
+      @alimento_2=Alimentos.new(@Yogurt)
+      @alimento_3=Alimentos.new(@Cerdo)
+      @alimento_4=Alimentos.new(@Ternera)
+      @alimento_5=Alimentos.new(@Pollo)
    end
+   
+    describe "# almacenamiento de datos del alimento" do
+   	
+         it "Se almacenan correctamente los nombres de los alimentos" do
+             expect(@alimento_0.nombre).to eq(@Huevo_frito[0])
+             expect(@alimento_1.nombre).to eq(@Leche_vaca[0])
+             expect(@alimento_2.nombre).to eq(@Yogurt[0])
+             expect(@alimento_3.nombre).to eq(@Cerdo[0])
+             expect(@alimento_4.nombre).to eq(@Ternera[0])
+             expect(@alimento_5.nombre).to eq(@Pollo[0])
+         end
+    end
    
 end
