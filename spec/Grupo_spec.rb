@@ -13,4 +13,18 @@ describe Grupo do
       @comida[6]=Grupo.new("Huevos, lácteos y helados","Huevo frito",14.1,0.0,19.5)
 	end
 	
+	describe "# Comprobando almacenamiento de los diferentes grupos." do
+		
+		context "Existiendo el método para ello." do
+			it "Los grupos se han almacenado correctamente" do
+				 expect(@comida[0].grupo).to eq("Frutas")
+				 expect(@comida[1].grupo).to eq("Verduras y hortalizas")
+				 expect(@comida[2].grupo).to eq("Alimentos ricos en carbohidratos")
+				 expect(@comida[3].grupo).to eq("Alimentos grasos")
+				 expect(@comida[4].grupo).to eq("Pescados y mariscos")
+				 expect(@comida[5].grupo).to eq("Carnes y derivados")
+				 expect(@comida[6].grupo).to eq("Huevos, lácteos y helados")
+			end
+	    end
+	end
 end
