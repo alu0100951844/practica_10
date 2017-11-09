@@ -1,43 +1,40 @@
-# Practica6
+# Practica 7: POO. Herencia.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/practica_6`. To experiment with that code, run `bin/console` for an interactive prompt.
+1. Crear una clase Ruby para representar y gestionar listas doblemente enlazadas (List) de manera
+que se puedan recorrer en ambos sentidos.
 
-TODO: Delete this and the text above, and describe your gem
+Ejemplos de descripci´on de espectativas son las siguientes:
+Debe existir un Nodo de la lista con sus datos, su siguiente y su previo
+Debe existir una Lista con su cabeza y su cola
+Se puede insertar un elemento en la Lista
+Se pueden insertar varios elementos en la Lista
+Se extrae el primer elemento de la Lista
+Se extrae el ´ultimo elemento de la Lista
 
-## Installation
+2. Considere las clases Ruby para representar alimentos de pr´acticas anteriores. Siguiendo la “pir´amide
+alimenticia”, cree una jerarqu´ıa de clases que permita clasificar los alimentos por grupos:
+‘huevos, l´acteos y helados’ , ‘carnes y derivados’ , ‘pescados y mariscos’, ‘alimentos grasos’,
+‘alimentos ricos en carbohidratos’, ‘verduras y hortalizas’, ‘frutas’ y ‘bebidas’
 
-Add this line to your application's Gemfile:
+Genere pruebas para comprobar la clase de un objeto, el tipo de un objeto y su pertenecia a
+una jerarquía
 
-```ruby
-gem 'practica_6'
-```
+3. Utilizar la herramienta Guard de Comprobaci´on Continua con el c´odigo Ruby desarrollado.
+Se ha de configurar de manera que permita la ejecuci´on de las pruebas definidas con Rspec
+cuando se modifiquen.
 
-And then execute:
+A ñadir Guard como una dependencia de desarrollo en el fichero de especificaciones de la
+gema .gemspec.
 
-    $ bundle
+spec.add_development_dependency "guard"
+spec.add_development_dependency "guard-rspec"
+spec.add_development_dependency "guard-bundler"
 
-Or install it yourself as:
+Instalar Guard a través de Bundler.
+bin/setup
 
-    $ gem install practica_6
+Generar un fichero de guardia por defecto (Guardfile).
+bundle exec guard init
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/practica_6. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Practica6 project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/practica_6/blob/master/CODE_OF_CONDUCT.md).
+Ejecutar Guard a través de Bundler en una terminal.
+bundle exec guard
