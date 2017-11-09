@@ -34,4 +34,23 @@ class List
 	    end
 	end
 	
+	def extract_head!
+		extraer=@head
+		
+		if(sz>0)
+	       @head= head.next
+	       
+	       if head.nil?
+	          @tail=nil
+	       else
+	          @head.prev=nil
+	       end
+	          
+	       extraer.next=nil
+	       extraer.prev=nil
+		   @sz= @sz-1
+		end
+	    extraer
+	end
+	
 end
