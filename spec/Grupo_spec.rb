@@ -25,6 +25,9 @@ describe Grupo do
 				 expect(@comida[5].grupo).to eq("Carnes y derivados")
 				 expect(@comida[6].grupo).to eq("Huevos, lácteos y helados")
 			end
+			it "Formateo to_s" do
+				 expect(@comida[0].to_s).to eq("Grupo: Frutas alimento: Pera Proteínas: 0.5g Glúcidos: 12.7g Lípidos: 0.3g")
+		    end
 	    end
 	end
 end
