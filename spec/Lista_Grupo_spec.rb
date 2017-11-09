@@ -34,6 +34,36 @@ describe List do
       @lista.insert_string(@comida)
    end
    
+     context "Si existen los métodos." do 
+       
+      describe "# Operaciones en la Lista con objetos Grupo < Alimentos" do
+          
+          it "Inserción cadena de objetos Grupo en el head" do
+              expect(@lista.sz).to eq(22)
+          end
+          
+          it "Inserción de un objeto Grupo en el head" do
+              @lista.insert_head!(@comida[21])
+              expect(@lista.sz).to eq(23)
+          end
+          
+          it "Inserción objeto Grupo en el tail" do
+              @lista.insert_tail!(@comida[21])
+              expect(@lista.sz).to eq(24)
+          end
+          
+          it "Extracción objeto Grupo del head" do
+              @lista.extract_head!
+              expect(@lista.sz).to eq(23)
+          end
+          
+          it "Extracción objeto Grupo del tail" do
+              @lista.extract_tail!
+              expect(@lista.sz).to eq(22)
+          end
+      end
+   end
+   
    
  end
    
