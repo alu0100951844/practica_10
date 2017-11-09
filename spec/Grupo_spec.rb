@@ -38,6 +38,16 @@ describe Grupo do
           it "La superclase de Grupo es Alimentos" do
              expect(Grupo.superclass).to be Alimentos
           end
+          
+          it "La clase de los objetos es Grupo, comprobando con instance_of?" do
+		     expect(@comida[0].instance_of?(Grupo)).to be true
+		     expect(@comida[1].instance_of?(Grupo)).to be true
+		     expect(@comida[2].instance_of?(Grupo)).to be true
+		     expect(@comida[3].instance_of?(Grupo)).to be true
+		     expect(@comida[4].instance_of?(Grupo)).to be true
+		     expect(@comida[5].instance_of?(Grupo)).to be true
+		     expect(@comida[6].instance_of?(Grupo)).to be true
+	      end
        end
     end
 end
