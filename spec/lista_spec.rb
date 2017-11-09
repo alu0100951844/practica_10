@@ -6,7 +6,8 @@ describe List do
        @lista = List.new()
        
        @lista_2 = List.new()
-       @lista_2.insert_tail!(3) 
+       @lista_2.insert_tail!(3)
+       @lista_2.insert_head!(5)
       
     end
     
@@ -23,6 +24,20 @@ describe List do
         
             it "Tamaño de la lista por defecto" do
                 expect(@lista.sz).to eq(0) 
+            end
+        end
+        
+        context "Si se establece cola y cabeza en la lista" do    
+            it "La cola de la lista es correcta" do
+                expect(@lista_2.tail.value).to eq(3)
+            end
+        
+            it "La cabeza de la lista es correcta" do
+                expect(@lista_2.head.value).to eq(5)
+            end
+        
+            it "El tamaño de la lista es correcto" do
+                expect(@lista_2.sz).to eq(2)
             end
         end
     end
