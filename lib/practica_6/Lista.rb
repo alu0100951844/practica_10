@@ -10,6 +10,12 @@ class List
 	   @sz=0
 	end
 	
+	def insert_string(val_string)
+	   for num in (0..val_string.length-1)
+          insert_head!(val_string[num])
+       end
+    end
+	
 	def insert_tail!(val)
 		if(@sz==0)
 		   @tail=Node.new(val,nil,nil)
