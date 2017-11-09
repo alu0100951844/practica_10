@@ -24,9 +24,11 @@ describe List do
       
     end
     
+    
+    
     context "Existiendo métodos de la clase" do
     	
-    	escribe "# Se introduce un string en la lista" do
+    	describe "# Se introduce un string en la lista" do
             it "Incrementa el tamaño y se introduce el string" do
                 expect(@lista_5.to_s).to eq("(size=8 ==> head=11 tail=4)")
             end
@@ -53,6 +55,22 @@ describe List do
         describe "# Se quita nodo de la cabeza" do
             it "Disminuye el tamaño y se elimina dicho nodo" do
                 expect(@lista.extract_head!).to eq(nil)
+            end
+        end
+        
+        describe "# Visualización de la cola y cabeza de una lista" do
+            
+            context "Si se ha establecido cabeza y cola" do
+                it "Se visualizan correctamente." do
+                    expect(@lista_2.to_s).to eq("(size=2 ==> head=5 tail=3)")
+                    
+                end
+            end
+            
+            context "Si no se ha establecido cabeza y cola" do
+                it "Se indica que la cola está vacía." do
+                    expect(@lista.to_s).to eq("La lista está vacía.")
+                end
             end
         end
     end

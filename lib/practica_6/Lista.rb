@@ -78,4 +78,12 @@ class List
 	    extraer
 	end
 	
+	def to_s
+		if(sz>0)
+		   "(size=#{sz} ==> head=#{head.value} tail=#{tail.value})"
+		else
+	       "La lista está vacía."
+	    end
+	end
+	
 end
