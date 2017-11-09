@@ -1,0 +1,3 @@
+require 'practica_6'
+
+ 
