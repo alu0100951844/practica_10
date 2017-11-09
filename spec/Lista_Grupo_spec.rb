@@ -64,7 +64,73 @@ describe List do
       end
    end
    
-   
+    context "Si se indican los datos de los alimentos." do 
+    	
+       describe "# almacenamiento de datos del objeto Grupo < Alimentos en lista" do
+           
+           it "Se almacenan correctamente los datos del objeto Grupo para Huevo, lácteos y helados" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Huevos, lácteos y helados")
+                expect(@valor.nombre).to eq("Huevo frito")
+                expect(@valor.proteinas).to eq(14.1)
+                expect(@valor.glucidos).to eq(0.0)
+                expect(@valor.lipidos).to eq(19.5)
+            end
+            
+           it "Se almacenan correctamente los datos del objeto Grupo para Carnes y derivados" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Carnes y derivados")
+                expect(@valor.nombre).to eq("Cerdo")
+                expect(@valor.proteinas).to eq(21.5)
+                expect(@valor.glucidos).to eq(0.0)
+                expect(@valor.lipidos).to eq(6.3)
+            end
+            
+           it "Se almacenan correctamente los datos del objeto Grupo para Pescados y mariscos" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Pescados y mariscos")
+                expect(@valor.nombre).to eq("Bacalao")
+                expect(@valor.proteinas).to eq(17.7)
+                expect(@valor.glucidos).to eq(0.0)
+                expect(@valor.lipidos).to eq(0.4)
+            end
+            
+           it "Se almacenan correctamente los datos del objeto Grupo para Alimentos grasos" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Alimentos grasos")
+                expect(@valor.nombre).to eq("Aceite de oliva")
+                expect(@valor.proteinas).to eq(0.0)
+                expect(@valor.glucidos).to eq(0.2)
+                expect(@valor.lipidos).to eq(99.6)
+            end
+            
+           it "Se almacenan correctamente los datos del objeto Grupo para Alimentos ricos en carbohidratos" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Alimentos ricos en carbohidratos")
+                expect(@valor.nombre).to eq("Azucar")
+                expect(@valor.proteinas).to eq(0.0)
+                expect(@valor.glucidos).to eq(99.8)
+                expect(@valor.lipidos).to eq(0.0)
+            end
+            
+           it "Se almacenan correctamente los datos del objeto Grupo para Verduras y hortalizas" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Verduras y hortalizas")
+                expect(@valor.nombre).to eq("Tomate")
+                expect(@valor.proteinas).to eq(1.0)
+                expect(@valor.glucidos).to eq(3.5)
+                expect(@valor.lipidos).to eq(0.2)
+            end
+   	
+            it "Se almacenan correctamente los datos del objeto Grupo para Fruta" do
+            	@valor=@lista.extract_head!.value
+                expect(@valor.grupo).to eq("Frutas")
+                expect(@valor.nombre).to eq("Pera")
+                expect(@valor.proteinas).to eq(0.5)
+                expect(@valor.glucidos).to eq(12.7)
+                expect(@valor.lipidos).to eq(0.3)
+            end
+        end
+    end
  end
-   
 end
