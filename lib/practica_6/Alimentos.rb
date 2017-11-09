@@ -19,5 +19,18 @@ class Alimentos
    
 end
 
-
+class Grupo < Alimentos
+   
+   attr_reader :grupo
+   
+   def initialize(group,name,protein,glucids,lipids)
+      super(name,protein,glucids,lipids)
+      @grupo = group
+   end
+   
+   def to_s
+      "Grupo: #{@grupo} alimento: #{nombre} Proteínas: #{proteinas}g Glúcidos: #{glucidos}g Lípidos: #{lipidos}g"
+   end
+   
+end
 
