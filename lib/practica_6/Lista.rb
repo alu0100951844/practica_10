@@ -53,4 +53,23 @@ class List
 	    extraer
 	end
 	
+	def extract_tail!
+		extraer=@tail
+		
+		if(sz>0)
+	       @tail= tail.prev
+	       
+	       if tail.nil?
+	          @head=nil
+	       else
+	          @tail.next=nil
+	       end
+	          
+	       extraer.next=nil
+	       extraer.prev=nil
+		   @sz= @sz-1
+		end
+	    extraer
+	end
+	
 end
