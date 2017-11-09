@@ -28,5 +28,9 @@ class Grupo < Alimentos
       @grupo = group
    end
    
+   def to_s
+      "Grupo: #{@grupo} alimento: #{nombre} Proteínas: #{proteinas}g Glúcidos: #{glucidos}g Lípidos: #{lipidos}g"
+   end
+   
 end
 
