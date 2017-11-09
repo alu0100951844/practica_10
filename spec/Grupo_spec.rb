@@ -106,6 +106,16 @@ describe Grupo do
 		        expect(@comida[6].respond_to?:lipidos).to be true
 		        expect(@comida[6].respond_to?(:valor_energetico)).to be true
 	        end
+	        
+	        it "Se confirma que el objeto pertenece a una jerarquía" do
+	            
+	            expect(@comida[0].class).to be Grupo
+	            expect(Grupo.superclass).to be Alimentos
+	            expect(Grupo.class).to be Class
+	            expect(Class.superclass).to be Module
+	            expect(Module.superclass).to be Object
+	       
+	       end
        end
     end
 end
