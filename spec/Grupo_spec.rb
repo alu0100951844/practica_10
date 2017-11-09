@@ -48,6 +48,64 @@ describe Grupo do
 		     expect(@comida[5].instance_of?(Grupo)).to be true
 		     expect(@comida[6].instance_of?(Grupo)).to be true
 	      end
+	      
+	      it "Prueba para comprobar tipo de objeto con respond_to?" do
+		        expect(@comida[0].respond_to?:grupo).to be true
+		        expect(@comida[0].respond_to?(:to_s)).to be true
+		        expect(@comida[0].respond_to?:nombre).to be true
+		        expect(@comida[0].respond_to?:proteinas).to be true
+		        expect(@comida[0].respond_to?:glucidos).to be true
+		        expect(@comida[0].respond_to?:lipidos).to be true
+		        expect(@comida[0].respond_to?(:valor_energetico)).to be true
+		        
+		        expect(@comida[1].respond_to?:grupo).to be true
+		        expect(@comida[1].respond_to?(:to_s)).to be true
+		        expect(@comida[1].respond_to?:nombre).to be true
+		        expect(@comida[1].respond_to?:proteinas).to be true
+		        expect(@comida[1].respond_to?:glucidos).to be true
+		        expect(@comida[1].respond_to?:lipidos).to be true
+		        expect(@comida[1].respond_to?(:valor_energetico)).to be true
+		        
+		        expect(@comida[2].respond_to?:grupo).to be true
+		        expect(@comida[2].respond_to?(:to_s)).to be true
+		        expect(@comida[2].respond_to?:nombre).to be true
+		        expect(@comida[2].respond_to?:proteinas).to be true
+		        expect(@comida[2].respond_to?:glucidos).to be true
+		        expect(@comida[2].respond_to?:lipidos).to be true
+		        expect(@comida[2].respond_to?(:valor_energetico)).to be true
+		        
+		        expect(@comida[3].respond_to?:grupo).to be true
+		        expect(@comida[3].respond_to?(:to_s)).to be true
+		        expect(@comida[3].respond_to?:nombre).to be true
+		        expect(@comida[3].respond_to?:proteinas).to be true
+		        expect(@comida[3].respond_to?:glucidos).to be true
+		        expect(@comida[3].respond_to?:lipidos).to be true
+		        expect(@comida[3].respond_to?(:valor_energetico)).to be true
+		        
+		        expect(@comida[4].respond_to?:grupo).to be true
+		        expect(@comida[4].respond_to?(:to_s)).to be true
+		        expect(@comida[4].respond_to?:nombre).to be true
+		        expect(@comida[4].respond_to?:proteinas).to be true
+		        expect(@comida[4].respond_to?:glucidos).to be true
+		        expect(@comida[4].respond_to?:lipidos).to be true
+		        expect(@comida[4].respond_to?(:valor_energetico)).to be true
+		        
+		        expect(@comida[5].respond_to?:grupo).to be true
+		        expect(@comida[5].respond_to?(:to_s)).to be true
+		        expect(@comida[5].respond_to?:nombre).to be true
+		        expect(@comida[5].respond_to?:proteinas).to be true
+		        expect(@comida[5].respond_to?:glucidos).to be true
+		        expect(@comida[5].respond_to?:lipidos).to be true
+		        expect(@comida[5].respond_to?(:valor_energetico)).to be true
+		        
+		        expect(@comida[6].respond_to?:grupo).to be true
+		        expect(@comida[6].respond_to?(:to_s)).to be true
+		        expect(@comida[6].respond_to?:nombre).to be true
+		        expect(@comida[6].respond_to?:proteinas).to be true
+		        expect(@comida[6].respond_to?:glucidos).to be true
+		        expect(@comida[6].respond_to?:lipidos).to be true
+		        expect(@comida[6].respond_to?(:valor_energetico)).to be true
+	        end
        end
     end
 end
