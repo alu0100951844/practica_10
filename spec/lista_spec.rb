@@ -20,7 +20,7 @@ describe List do
        @lista_4.extract_tail!
        
        @lista_5 = List.new()
-       @lista_5.insert_string([4,5,6,8,9,7,10,11])
+       @lista_5.insert_string!([4,5,6,8,9,7,10,11])
       
     end
     

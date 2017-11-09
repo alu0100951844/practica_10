@@ -31,7 +31,7 @@ describe List do
       @comida[21]=Grupo.new("Huevos, lácteos y helados","Huevo frito",14.1,0.0,19.5)
       
       @lista=List.new
-      @lista.insert_string(@comida)
+      @lista.insert_string!(@comida)
    end
    
      context "Si existen los métodos." do 
