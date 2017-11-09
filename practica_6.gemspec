@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Practica 6 TDD"
   spec.description   = "Practica 6 TDD"
-  spec.homepage      = "git@github.com:ULL-ESIT-LPP-1718/tdd-alu0100951844.git"
+  spec.homepage      = "https://github.com/ULL-ESIT-LPP-1718/tdd-alu0100951844.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -33,4 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "guard-bundler"
 end
