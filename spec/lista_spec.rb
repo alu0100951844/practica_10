@@ -19,7 +19,7 @@ describe List do
             end
         
             it "Tamaño de la lista por defecto" do
-                expect(@lista.sz).to eq(0)
+                expect(@lista.sz).to eq(0) 
             end
         end
     end
