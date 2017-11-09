@@ -22,4 +22,16 @@ class List
 	    end
 	end
 	
+	def insert_head!(val)
+		if(@sz==0)
+		   @head=Node.new(val,nil,nil)
+		   @tail= head
+		   @sz= @sz+1
+		else
+		   @head.prev=Node.new(val,head,nil)
+		   @head= head.prev
+		   @sz= @sz+1
+	    end
+	end
+	
 end
