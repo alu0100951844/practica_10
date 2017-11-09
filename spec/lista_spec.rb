@@ -4,6 +4,9 @@ describe List do
 	
 	before :each do
        @lista = List.new()
+       
+       @lista_2 = List.new()
+       @lista_2.insert_tail!(3)
       
     end
     
