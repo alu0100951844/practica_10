@@ -18,7 +18,37 @@ describe List do
        @lista_4.insert_tail!(9)
        @lista_4.insert_head!(10)
        @lista_4.extract_tail!
+       
+       @lista_5 = List.new()
+       @lista_5.insert_string([4,5,6,8,9,7,10,11])
       
+    end
+    
+    context "Existiendo métodos de la clase" do
+        
+        describe "# Se introduce nuevo nodo en la cola" do
+            it "Incrementa el tamaño y se introduce dicho nodo" do
+                expect(@lista.insert_tail!(24)).to eq(1)
+            end
+        end
+        
+        describe "# Se introduce nuevo nodo en la cabeza" do
+            it "Incrementa el tamaño y se introduce dicho nodo" do
+                expect(@lista.insert_head!(89)).to eq(1)
+            end
+        end
+        
+        describe "# Se quita nodo de la cola" do
+            it "Disminuye el tamaño y se elimina dicho nodo" do
+                expect(@lista.extract_tail!).to eq(nil)
+            end
+        end
+        
+        describe "# Se quita nodo de la cabeza" do
+            it "Disminuye el tamaño y se elimina dicho nodo" do
+                expect(@lista.extract_head!).to eq(nil)
+            end
+        end
     end
     
     describe "# datos de una lista" do
