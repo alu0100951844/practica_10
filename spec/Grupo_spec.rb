@@ -30,4 +30,14 @@ describe Grupo do
 		    end
 	    end
 	end
+	
+	describe "# Comprobación de herencia." do
+		
+       context "Realizando una herencia correcta" do
+       	
+          it "La superclase de Grupo es Alimentos" do
+             expect(Grupo.superclass).to be Alimentos
+          end
+       end
+    end
 end
