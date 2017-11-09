@@ -25,6 +25,12 @@ describe List do
     end
     
     context "Existiendo métodos de la clase" do
+    	
+    	escribe "# Se introduce un string en la lista" do
+            it "Incrementa el tamaño y se introduce el string" do
+                expect(@lista_5.to_s).to eq("(size=8 ==> head=11 tail=4)")
+            end
+        end
         
         describe "# Se introduce nuevo nodo en la cola" do
             it "Incrementa el tamaño y se introduce dicho nodo" do
