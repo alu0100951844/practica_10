@@ -13,6 +13,11 @@ describe List do
        @lista_3.insert_tail!(7)
        @lista_3.insert_head!(8)
        @lista_3.extract_head!
+       
+       @lista_4 = List.new()
+       @lista_4.insert_tail!(9)
+       @lista_4.insert_head!(10)
+       @lista_4.extract_tail!
       
     end
     
@@ -59,6 +64,21 @@ describe List do
                 expect(@lista_3.sz).to eq(1)
             end
         end
+        
+        context "Si se establece cola y cabeza en la lista pero se quita la cola despues" do    
+            it "La cola de la lista es correcta" do
+                expect(@lista_4.tail.value).to eq(10)
+            end
+        
+            it "La cabeza de la lista es correcta" do
+                expect(@lista_4.head.value).to eq(10)
+            end
+        
+            it "El tamaño de la lista es correcto" do
+                expect(@lista_4.sz).to eq(1)
+            end
+        end
+       
     end
    
 end
