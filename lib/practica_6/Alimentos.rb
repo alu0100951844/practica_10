@@ -21,5 +21,10 @@ end
 
 class Grupo < Alimentos
    
+   def initialize(group,name,protein,glucids,lipids)
+      super(name,protein,glucids,lipids)
+      @grupo = group
+   end
+   
 end
 
