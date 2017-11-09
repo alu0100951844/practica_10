@@ -19,5 +19,7 @@ class Alimentos
    
 end
 
-
+class Grupo < Alimentos
+   
+end
 
