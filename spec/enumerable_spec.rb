@@ -60,6 +60,11 @@ describe List do
 				expect(@Lista.any? {|x| x >= @alimento[0]}).to eq(true)
 				expect(@Lista.any? {|x| x > @alimento[8]}).to eq(false)
 			end
+			
+			it "Comprobando método detect y find?" do
+				expect(@Lista.detect {|x| x == @alimento[0]}).to eq(@alimento[0])
+				expect(@Lista.find {|x| x == @No_en_lista}).to eq(nil)
+			end
 		end
 	end
 end
