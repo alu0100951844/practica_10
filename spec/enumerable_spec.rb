@@ -28,6 +28,10 @@ describe List do
 			it "Comprobando método each?" do
 				expect(@Lista.each{|x| x }).to eq(0..9)
 			end
+			
+			it "Comprobando método max?" do
+				expect(@Lista.max).to eq(@alimento[8])
+			end
 		end
 	end
 end
