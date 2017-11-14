@@ -1,7 +1,6 @@
-require 'practica_6/nodo'
 
 class List
-	
+
 	attr_reader :tail, :head, :sz
 	
 	def initialize
