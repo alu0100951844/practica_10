@@ -41,6 +41,11 @@ describe List do
 				expect(@Lista.include?@alimento[0]).to eq(true)
 				expect(@Lista.include?@alimento[5]).to eq(true)
 			end
+			
+			it "Comprobando método map y collect" do
+				expect(@Lista.map{|x| x}).to eq([@alimento[9],@alimento[8],@alimento[7],@alimento[6],@alimento[5],@alimento[4],@alimento[3],@alimento[2],@alimento[1],@alimento[0]])
+				expect(@Lista.collect{|x| x}).to eq([@alimento[9],@alimento[8],@alimento[7],@alimento[6],@alimento[5],@alimento[4],@alimento[3],@alimento[2],@alimento[1],@alimento[0]])
+			end
 		end
 	end
 end
