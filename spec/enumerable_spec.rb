@@ -32,6 +32,10 @@ describe List do
 			it "Comprobando método max?" do
 				expect(@Lista.max).to eq(@alimento[8])
 			end
+			
+			it "Comprobando método min?" do
+				expect(@Lista.min).to eq(@alimento[6])
+			end
 		end
 	end
 end
