@@ -50,6 +50,11 @@ describe List do
 			it "Comprobando método count" do
     		    expect(@Lista.count).to eq(10)
 			end
+			
+			it "Comprobando método all?" do
+				expect(@Lista.all? {|x| x >= @alimento[0]}).to eq(false)
+				expect(@Lista.all? {|x| x >= @alimento[6]}).to eq(true)
+			end
 		end
 	end
 end
