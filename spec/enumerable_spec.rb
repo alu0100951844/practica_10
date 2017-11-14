@@ -55,6 +55,11 @@ describe List do
 				expect(@Lista.all? {|x| x >= @alimento[0]}).to eq(false)
 				expect(@Lista.all? {|x| x >= @alimento[6]}).to eq(true)
 			end
+			
+			it "Comprobando método any?" do
+				expect(@Lista.any? {|x| x >= @alimento[0]}).to eq(true)
+				expect(@Lista.any? {|x| x > @alimento[8]}).to eq(false)
+			end
 		end
 	end
 end
