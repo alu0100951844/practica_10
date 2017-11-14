@@ -9,6 +9,14 @@ class List
 	   @sz=0
 	end
 	
+	def each
+	   var=@head
+	   for num in (0..@sz-1)
+          yield var.value
+          var=var.next
+       end
+	end
+	
 	def insert_string!(val_string)
 	   for num in (0..val_string.length-1)
           insert_head!(val_string[num])
