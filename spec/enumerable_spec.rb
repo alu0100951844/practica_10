@@ -69,6 +69,10 @@ describe List do
 			it "comprobrando método drop" do
     			expect(@Lista.drop(5)).to eq([@alimento[4],@alimento[3],@alimento[2],@alimento[1],@alimento[0]])
 			end
+			
+			it "comprobrando método sort" do
+    			expect(@Lista.sort{ |a, b| b <=> a }).to eq([@alimento[8],@alimento[7],@alimento[0],@alimento[3],@alimento[9],@alimento[2],@alimento[1],@alimento[5],@alimento[4],@alimento[6]])
+			end
 		end
 	end
 end
