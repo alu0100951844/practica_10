@@ -65,6 +65,10 @@ describe List do
 				expect(@Lista.detect {|x| x == @alimento[0]}).to eq(@alimento[0])
 				expect(@Lista.find {|x| x == @No_en_lista}).to eq(nil)
 			end
+			
+			it "comprobrando método drop" do
+    			expect(@Lista.drop(5)).to eq([@alimento[4],@alimento[3],@alimento[2],@alimento[1],@alimento[0]])
+			end
 		end
 	end
 end
