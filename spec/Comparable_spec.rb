@@ -18,6 +18,38 @@ describe Alimentos do
 				expect(@alimento_2 < @alimento_3).to eq(true)
 				expect(@alimento_1 < @alimento_2).to eq(true)
 			end
+			
+			it "Comprobando funcionamiento operador >" do
+				expect(@alimento_0 > @alimento_1).to eq(true)		
+				expect(@alimento_3 > @alimento_2).to eq(true)
+				expect(@alimento_2 > @alimento_1).to eq(true)
+			end
+			
+			it "Comprobando funcionamiento operador <=" do
+				expect(@alimento_1 <= @alimento_0).to eq(true)		
+				expect(@alimento_2 <= @alimento_3).to eq(true)
+				expect(@alimento_1 <= @alimento_2).to eq(true)
+				expect(@alimento_1 <= @alimento_1).to eq(true)
+			end
+			
+			it "Comprobando funcionamiento operador >=" do
+				expect(@alimento_0 >= @alimento_1).to eq(true)		
+				expect(@alimento_3 >= @alimento_2).to eq(true)
+				expect(@alimento_2 >= @alimento_1).to eq(true)
+				expect(@alimento_1 >= @alimento_1).to eq(true)
+			end
+			
+			it "Comprobando funcionamiento operador ==" do
+				expect(@alimento_0 == @alimento_0).to eq(true)		
+				expect(@alimento_1 == @alimento_1).to eq(true)
+				expect(@alimento_2 == @alimento_2).to eq(true)
+			end
+			
+			it "Comprobando funcionamiento de between?" do
+				expect(@alimento_2.between?(@alimento_1,@alimento_0)).to eq(true)		
+				expect(@alimento_3.between?(@alimento_2,@alimento_0)).to eq(true)
+				expect(@alimento_2.between?(@alimento_1,@alimento_3)).to eq(true)
+			end
 		end
 	end
 end
