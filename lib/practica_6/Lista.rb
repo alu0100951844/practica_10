@@ -1,6 +1,8 @@
 
 class List
 
+	include Enumerable
+
 	attr_reader :tail, :head, :sz
 	
 	def initialize
