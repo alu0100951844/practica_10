@@ -1,5 +1,7 @@
 class Alimentos
    
+   include Comparable
+   
    attr_reader :nombre, :proteinas, :glucidos, :lipidos
 	
    def initialize(name,protein,glucids,lipids)
@@ -7,6 +9,10 @@ class Alimentos
       @proteinas = protein
       @glucidos = glucids
       @lipidos = lipids
+   end
+   
+   def <=>(other)
+      valor_energetico <=> other.valor_energetico
    end
    
    def to_s
