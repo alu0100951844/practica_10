@@ -36,6 +36,11 @@ describe List do
 			it "Comprobando método min?" do
 				expect(@Lista.min).to eq(@alimento[6])
 			end
+			
+			it "Comprobando método include?" do
+				expect(@Lista.include?@alimento[0]).to eq(true)
+				expect(@Lista.include?@alimento[5]).to eq(true)
+			end
 		end
 	end
 end
