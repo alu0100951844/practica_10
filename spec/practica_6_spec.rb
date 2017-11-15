@@ -478,6 +478,8 @@ end
 
 
 describe Alimentos do
+    
+   context "Si se ha incluído el módulo Comparable" do
 	
 	before :each do
 	  @alimento_0=Grupo.new("Huevos, lácteos y helados","Huevo frito",14.1,0.0,19.5)  #231,9
@@ -529,10 +531,13 @@ describe Alimentos do
 			end
 		end
 	end
+  end
 end
 
 
 describe List do
+    
+  context "Si se ha incluído el módulo Enumerable" do    
 	
 	before :each do
 	  @alimento=[]
@@ -607,6 +612,7 @@ describe List do
 			end
 		end
 	end
+  end
 end
 
 
