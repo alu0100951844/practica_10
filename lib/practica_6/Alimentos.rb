@@ -7,6 +7,11 @@ class Alimentos
    attr_reader :nombre, :proteinas, :glucidos, :lipidos
 	
 	# Metodo que permite declarar e inicializar las variables de instancia.
+	#
+	# @param name nombre del alimento
+   # @param protein Contiene la cantidad de proteinas del alimento.
+   # @param glucids Contiene la cantidad de glúcidos del alimento.
+   # @param lipids Contiene la cantidad de lípidos del alimento.
    def initialize(name,protein,glucids,lipids)
       @nombre = name
       @proteinas = protein
@@ -14,12 +19,20 @@ class Alimentos
       @lipidos = lipids
    end
    
+   
    # El método <=> se encarga de poner en práctica los operadores convencionales de comparación ( <, <=, ==, >=, y >) y el método between?
 	#
 	# @param other Representa al objeto situado a la derecha del operador en una comparación
 	# @return Un valor numérico (-1,0,+1) dependiendo de si el receptor es menor, igual o mayor que el otro objeto.
    def <=>(other)
       valor_energetico <=> other.valor_energetico
+   end
+   
+   # El método == ofrece una forma específica de aplicar el operador ==
+	#
+	# @param other Representa al objeto situado a la derecha del operador en una comparación
+   def ==(other)
+      @nombre == other.nombre
    end
    
    # El método to_s se encarga de formatear la salida cuando intentamos visualizar un objeto
