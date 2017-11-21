@@ -635,6 +635,26 @@ describe Alimentos do
   
         context "Existiendo los datos del alimento" do
             
+            it "Se almacena correctamente el nombre del alimento" do
+                expect(@yogurt.nombre).to eq("Yogurt")
+                expect(@glucosa.nombre).to eq("Glucosa")
+            end
+        
+            it "Se almacena correctamente las proteinas del alimento" do
+                expect(@yogurt.proteinas).to eq(3.8)
+                expect(@glucosa.proteinas).to eq(0)
+            end
+        
+            it "Se almacena correctamente los glucidos del alimento" do
+                expect(@yogurt.glucidos).to eq(4.9) 
+                expect(@glucosa.glucidos).to eq(99.8)
+            end
+        
+            it "Se almacena correctamente las grasas del alimento" do
+                expect(@yogurt.lipidos).to eq(3.8)
+                expect(@glucosa.lipidos).to eq(0)
+            end
+            
             it "Se almacena correctamente las mediciones de los individuos" do
                 expect(@yogurt.datos_IG).to eq([[6.1 , 6.6 , 6.3 , 6.3 , 6.1 , 6.9 , 6.8 , 6.5 , 6.4 , 6.9 , 6.8 , 6.5 , 6.3 , 6.2 , 6.7 , 6.2 , 5.9 , 5.8 , 5.8 , 5.8 , 5.8 , 5.8 , 5.9 , 6.2 , 6.4],[4.9 , 4.9 , 5.2 , 5.8 , 6.5 , 7.0 , 7.2 , 7.3 , 7.3 , 6.6 , 6.2 , 6.1 , 6.0 , 6.1 , 5.9 , 5.9 , 5.9 , 5.9 , 5.8 , 5.8 , 5.5 , 5.5 , 5.6 , 5.9 , 5.9]])
                 expect(@glucosa.datos_IG).to eq([[4.9 , 5.3 , 5.9 , 6.7 , 7.2 , 7.6 , 8.0 , 8.2 , 8.2 , 8.4 , 8.3 , 8.3 , 8.0 , 7.5 , 7.1 , 6.8 , 6.8 , 6.9 , 6.8 , 6.3 , 6.2 , 6.3 , 6.2 , 6.3 , 6.1],[6.3 , 5.4 , 5.6 , 5.7 , 6.5 , 7.4 , 7.9 , 7.4 , 7.7 , 7.9 , 7.9 , 7.8 , 7.8 , 7.8 , 8.0 , 8.5 , 9.4 , 10.8 , 10.5 , 9.1 , 8.9 , 8.3 , 7.7 , 7.6 , 7.5]])
@@ -643,4 +663,15 @@ describe Alimentos do
         end
     end
     
+    describe "# Comprobando cálculo de índice glucémico." do
+	
+	    context "Existiendo los correspondientes métodos en la clase" do
+	        
+	        it "Se calcula correctamente el AIBC" do
+                expect(@yogurt.aibc).to eq([21.75, 138.5])
+                expect(@glucosa.aibc).to eq([256.0, 186.5])
+            end
+	        
+	    end
+	end
 end
