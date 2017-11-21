@@ -20,6 +20,19 @@ class Alimentos
       @lipidos = lipids
    end
    
+   # Método para calcular el Área incremental bajo la curva (AIBC) de un alimento o de la glucosa.
+   #
+   # @return Devuelve un vector con los resultados del AIBC de cada individuo.
+   def aibc
+      resultado=Array.new
+      datos_IG.each do |x|
+         almacen=Array.new
+         x.each_cons(2){ |val|  almacen<<((val[1]-x[0]+val[0]-x[0])/2)*5 } 
+         resultado<<(almacen.reduce :+).round(2)
+      end
+      resultado
+   end
+   
    
    # El método <=> se encarga de poner en práctica los operadores convencionales de comparación ( <, <=, ==, >=, y >) y el método between?
 	#
