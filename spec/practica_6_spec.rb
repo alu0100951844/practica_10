@@ -680,6 +680,11 @@ describe Alimentos do
                     expect(IG_idv[i]).to eq(soluciones[i])
                 end
             end
+            
+            it "Se calcula correctamente el sumatorio de los indices glucemicos relativos por individuo" do
+                Sumatorio_IG_idv = IG_idv.reduce :+
+                expect(Sumatorio_IG_idv).to eq(82.76)
+            end
 	        
 	    end
 	end
