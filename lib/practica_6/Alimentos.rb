@@ -5,6 +5,7 @@ class Alimentos
 	include Comparable
 	
    attr_reader :nombre, :proteinas, :glucidos, :lipidos
+   attr_accessor :datos_IG
 	
 	# Metodo que permite declarar e inicializar las variables de instancia.
 	#
