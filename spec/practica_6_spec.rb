@@ -671,6 +671,15 @@ describe Alimentos do
                 expect(@yogurt.aibc).to eq([21.75, 138.5])
                 expect(@glucosa.aibc).to eq([256.0, 186.5])
             end
+            
+            it "Se calcula correctamente el indice glucemico para cada individuo" do
+                IG_idv=[]
+                soluciones=[8.5,74.26]
+                for i in (0..@yogurt.aibc.length-1)
+                    IG_idv << ((@yogurt.aibc[i]/@glucosa.aibc[i])*100).round(2)
+                    expect(IG_idv[i]).to eq(soluciones[i])
+                end
+            end
 	        
 	    end
 	end
