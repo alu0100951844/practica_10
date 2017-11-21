@@ -1,12 +1,10 @@
-# Practica 8: POO. Módulos.
+# Practica 9: PROGRAMACIÓN FUNCIONAL. FUNCIONES DE ORDEN SUPERIOR.
 
-1. Considere la jerarquía de clases Ruby para representar alimentos de prácticas anteriores.
-Modifíquela de manera que las instancias sean comparables.
+1. Escribir un mÉtodo para calcular el Índice Glucémico de un alimento que siga el paradigma
+de programación funcional.
 
-2. Considere la clase Ruby para representar y gestionar listas doblemente enlazadas de prácticas
-anteriores. Modifíquela de manera que las instancias sean enumerables.
-
-3. Documentar la gema utilizando una herramienta de generación automática de documentación
-(RDOC o YARD).
+2. Comprobar con la herramienta Travis de Integración Continua. el código Ruby desarrollado.
+Con ella se comprueba la portabilidad de los desarrollos entre distintas plataformas y versiones
+de Ruby.
 
 
