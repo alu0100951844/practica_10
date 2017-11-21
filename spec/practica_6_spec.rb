@@ -685,7 +685,11 @@ describe Alimentos do
                 Sumatorio_IG_idv = IG_idv.reduce :+
                 expect(Sumatorio_IG_idv).to eq(82.76)
             end
-	        
+            
+            it "Se calcula correctamente indice glucémico del alimento para los individuos" do
+                IG=Sumatorio_IG_idv/@yogurt.datos_IG.length
+                expect(IG).to eq(41.38)
+            end
 	    end
 	end
 end
