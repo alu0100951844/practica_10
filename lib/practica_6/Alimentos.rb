@@ -24,12 +24,15 @@ class Alimentos
    #
    # @return Devuelve un vector con los resultados del AIBC de cada individuo.
    def aibc
-      resultado=Array.new
+      
+      almacen=Array.new
       datos_IG.each do |x|
-         almacen=Array.new
-         x.each_cons(2){ |val|  almacen<<((val[1]-x[0]+val[0]-x[0])/2)*5 } 
-         resultado<<(almacen.reduce :+).round(2)
+         almacen<<[]
+         x.each_cons(2){ |val|  almacen.last<<((val[1]-x[0]+val[0]-x[0])/2)*5 } 
       end
+      
+      resultado=Array.new
+      almacen.each{ |x| resultado<<(x.reduce :+).round(2) }
       resultado
    end
    
