@@ -31,9 +31,7 @@ class Alimentos
          x.each_cons(2){ |val|  almacen.last<<((val[1]-x[0]+val[0]-x[0])/2)*5 } 
       end
       
-      resultado=Array.new
-      almacen.each{ |x| resultado<<(x.reduce :+).round(2) }
-      resultado
+      almacen.map{ |x| (x.reduce :+).round(2) }
    end
    
    
