@@ -115,4 +115,28 @@ class Array
        solucion
    end
    
+   # Método que ordena el array recibido por parámetro usando el método each. 
+	#
+	# @param datos array que contiene los alimentos que deben ser ordenados según su valor energético.
+	# @return Un nuevo array con los datos ordenados según el valor energético.
+   def ordenar_each(datos)
+      solucion=Array.new
+      solucion << datos[0]
+      
+      datos.drop(1).each do |val_1|
+         solucion.each_with_index do |val_2,i|
+            if val_1<=val_2
+               solucion.insert(i,val_1)
+               break
+            end
+            
+            if i==solucion.length-1
+               solucion << val_1
+               break
+            end
+         end
+      end
+      solucion
+   end
+   
 end
