@@ -1,4 +1,4 @@
-require "practica_6"
+require "spec_helper"
 
 describe Alimentos do
    
@@ -692,4 +692,48 @@ describe Alimentos do
             end
 	    end
 	end
+end
+
+describe Alimentos do
+    
+    before :each do
+        
+      @comida=[
+                Grupo.new("Huevos, lácteos y helados","Huevo frito",14.1,0.0,19.5),         #231.9 k
+                Grupo.new("Huevos, lácteos y helados","Leche vaca",3.3,4.8,3.2),            #61.2 k
+                Grupo.new("Huevos, lácteos y helados","Yogurt",3.8,4.9,3.8),                #69.0 k
+                Grupo.new("Carnes y derivados","Cerdo",21.5,0.0,6.3),                       #142.7 k
+                Grupo.new("Carnes y derivados","Ternera",21.1,0.0,3.1),                     #112.3 k
+                Grupo.new("Carnes y derivados","Pollo",20.6,0.0,5.6),                       #132.8 k
+                Grupo.new("Pescados y mariscos","Bacalao",17.7,0.0,0.4),                    #74.4 k       
+                Grupo.new("Pescados y mariscos","Atun",21.5,0.0,15.5),                      #225.5 k
+                Grupo.new("Pescados y mariscos","Salmon",19.9,0.0,13.6),                    #202.0 k
+                Grupo.new("Alimentos grasos","Aceite de oliva",0.0,0.2,99.6),               #897.2 k
+                Grupo.new("Alimentos grasos","Mantequilla",0.7,0.0,83.2),                   #751.6 k
+                Grupo.new("Alimentos grasos","Chocolate",5.3,47.0,30.0),                    #479.2 k
+                Grupo.new("Alimentos ricos en carbohidratos","Azucar",0.0,99.8,0.0),        #399.2 k
+                Grupo.new("Alimentos ricos en carbohidratos","Arroz",6.8,77.7,0.6),         #343.4 k
+                Grupo.new("Alimentos ricos en carbohidratos","Lentejas",23.5,52.0,1.4),     #314.6 k
+                Grupo.new("Alimentos ricos en carbohidratos","Papas",2.0,15.4,0.1),         #70.5 k
+                Grupo.new("Verduras y hortalizas","Tomate",1.0,3.5,0.2),                    #19.8
+                Grupo.new("Verduras y hortalizas","Cebolla",1.3,5.8,0.3),                   #31.01 k
+                Grupo.new("Verduras y hortalizas","Calabaza",1.1,4.8,0.1),                  #24.5
+                Grupo.new("Frutas","Manzana",0.3,12.4,0.4),                                 #54.4 k
+                Grupo.new("Frutas","Platanos",1.2,21.4,0.2),                                #92.2 k
+                Grupo.new("Frutas","Pera",0.5,12.7,0.3)                                     #55.55 k
+              ]
+              
+      @dato = Array.new
+     
+    end
+    
+    describe "# Comprobación de los métodos de ordenación" do
+        
+        context "Si existen los respectivos métodos en la case" do
+        
+            it "Comprobando ordenación con for" do
+                expect(@dato.ordenar_for(@comida)).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
+            end
+        end
+    end
 end
