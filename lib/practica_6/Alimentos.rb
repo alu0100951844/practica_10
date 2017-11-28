@@ -92,9 +92,8 @@ end
 # Abrimos la clase Array para añadir los métodos de ordenación.
 class Array
    
-   # Método que ordena un array mediante bucles for.
-	#
-	# @return Un nuevo array con los datos ordenados según el valor energético.
+   # metodo que ordena un array mediante bucles for.
+   # @return Un nuevo array con los datos ordenados según el valor energético.
    def ordenar_for
       solucion=Array.new
       solucion << self[0]
@@ -114,9 +113,8 @@ class Array
        solucion
    end
    
-   # Método que ordena un array mediante el método each.
-	#
-	# @return Un nuevo array con los datos ordenados según el valor energético.
+   # metodo que ordena un array mediante el método each.
+   # @return Un nuevo array con los datos ordenados según el valor energético.
    def ordenar_each
       solucion=Array.new
       solucion << self[0]
