@@ -92,9 +92,8 @@ end
 # Abrimos la clase Array para añadir los métodos de ordenación.
 class Array
    
-   # Método que ordena el array recibido por parámetro usando bucles for.
+   # Método que ordena un array mediante bucles for.
 	#
-	# @param datos array que contiene los alimentos que deben ser ordenados según su valor energético.
 	# @return Un nuevo array con los datos ordenados según el valor energético.
    def ordenar_for
       solucion=Array.new
@@ -115,9 +114,8 @@ class Array
        solucion
    end
    
-   # Método que ordena el array recibido por parámetro usando el método each. 
+   # Método que ordena un array mediante el método each.
 	#
-	# @param datos array que contiene los alimentos que deben ser ordenados según su valor energético.
 	# @return Un nuevo array con los datos ordenados según el valor energético.
    def ordenar_each
       solucion=Array.new
