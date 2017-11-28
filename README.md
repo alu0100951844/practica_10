@@ -1,10 +1,19 @@
-# Practica 9: PROGRAMACIÓN FUNCIONAL. FUNCIONES DE ORDEN SUPERIOR.
+# Practica 10: PROGRAMACIÓN FUNCIONAL. BENCHMARKS.
 
-1. Escribir un mÉtodo para calcular el Índice Glucémico de un alimento que siga el paradigma
-de programación funcional.
+1. Escriba el ćodigo que permita la representaci ́on de la tabla mendiante un array.
 
-2. Comprobar con la herramienta Travis de Integración Continua. el código Ruby desarrollado.
-Con ella se comprueba la portabilidad de los desarrollos entre distintas plataformas y versiones
-de Ruby.
+2. Escriba el ćodigo que permita obtener un nuevo array con los elementos ordenados por su valor
+energ ́etico usando bucles fo.
 
+3. Escriba el ćodigo que permita obtener un nuevo array con los elementos ordenados por su valor
+energ ́etico usando el ḿetodo each.
+
+4. Escriba el ćodigo que permita obtener un nuevo array con los elementos ordenados por su valor
+enerǵetico usando el ḿetodo sort.
+
+5. Haciendo uso del ḿetodo benchmark de la clase Benchmark muestre un informe del tiempo de
+los ejercicios 2, 3, 4.
+
+6. En este momento se debeŕıa comprobar con la herramienta Coverall la historia del cubrimiento
+y las estad́ısticas del ćodigo Ruby desarrollado.
 
