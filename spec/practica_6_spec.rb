@@ -738,6 +738,10 @@ describe Alimentos do
             it "Comprobando ordenación con each" do
                 expect(@dato.ordenar_each(@comida)).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
             end
+            
+            it "Comprobando ordenación con sort" do
+                expect(@comida.sort).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
+            end
         end
     end
 end
