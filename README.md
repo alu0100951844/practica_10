@@ -16,4 +16,4 @@ los ejercicios 2, 3, 4.
 
 6. En este momento se debeŕıa comprobar con la herramienta Coverall la historia del cubrimiento
 y las estad́ısticas del ćodigo Ruby desarrollado.
- 
+  
