@@ -88,3 +88,31 @@ class Grupo < Alimentos
    end
    
 end
+
+# Abrimos la clase Array para añadir los métodos de ordenación.
+class Array
+   
+   # Método que ordena el array recibido por parámetro usando bucles for.
+	#
+	# @param datos array que contiene los alimentos que deben ser ordenados según su valor energético.
+	# @return Un nuevo array con los datos ordenados según el valor energético.
+   def ordenar_for(datos)
+      solucion=Array.new
+      solucion << datos[0]
+      
+      for i in (1..datos.length-1)
+         for j in (0..solucion.length-1)
+            if datos[i]<=solucion[j]
+               solucion.insert(j,datos[i])
+               break
+            end
+            
+            if j==solucion.length-1
+               solucion << datos[i]
+            end
+         end
+       end
+       solucion
+   end
+   
+end
