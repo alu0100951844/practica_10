@@ -744,4 +744,17 @@ describe Alimentos do
             end
         end
     end
+    
+    describe "# Benchmark." do
+        context "Existiendo el método Benchmark" do  
+           it " " do
+              Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
+                 tf = x.report("for:")   { @dato.ordenar_for(@comida) }
+                 tt = x.report("each:") { @dato.ordenar_each(@comida) }
+                 tu = x.report("sort:")  { @comida.sort }
+                 [tf+tt+tu, (tf+tt+tu)/3]
+              end
+           end
+       end
+   end
 end
