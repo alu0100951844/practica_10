@@ -722,8 +722,7 @@ describe Alimentos do
                 Grupo.new("Frutas","Platanos",1.2,21.4,0.2),                                #92.2 k
                 Grupo.new("Frutas","Pera",0.5,12.7,0.3)                                     #55.55 k
               ]
-              
-      @dato = Array.new
+             
      
     end
     
@@ -732,11 +731,11 @@ describe Alimentos do
         context "Si existen los respectivos métodos en la case" do
         
             it "Comprobando ordenación con for" do
-                expect(@dato.ordenar_for(@comida)).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
+                expect(@comida.ordenar_for).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
             end
             
             it "Comprobando ordenación con each" do
-                expect(@dato.ordenar_each(@comida)).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
+                expect(@comida.ordenar_each).to eq([@comida[16],@comida[18],@comida[17],@comida[19],@comida[21],@comida[1],@comida[2],@comida[15],@comida[6],@comida[20],@comida[4],@comida[5],@comida[3],@comida[8],@comida[7],@comida[0],@comida[14],@comida[13],@comida[12],@comida[11],@comida[10],@comida[9]])
             end
             
             it "Comprobando ordenación con sort" do
@@ -749,8 +748,8 @@ describe Alimentos do
         context "Existiendo el método Benchmark" do  
            it " " do
               Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-                 tf = x.report("for:")   { @dato.ordenar_for(@comida) }
-                 tt = x.report("each:") { @dato.ordenar_each(@comida) }
+                 tf = x.report("for:")   { @comida.ordenar_for }
+                 tt = x.report("each:") { @comida.ordenar_each }
                  tu = x.report("sort:")  { @comida.sort }
                  [tf+tt+tu, (tf+tt+tu)/3]
               end

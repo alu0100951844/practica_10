@@ -96,19 +96,19 @@ class Array
 	#
 	# @param datos array que contiene los alimentos que deben ser ordenados según su valor energético.
 	# @return Un nuevo array con los datos ordenados según el valor energético.
-   def ordenar_for(datos)
+   def ordenar_for
       solucion=Array.new
-      solucion << datos[0]
+      solucion << self[0]
       
-      for i in (1..datos.length-1)
+      for i in (1..self.length-1)
          for j in (0..solucion.length-1)
-            if datos[i]<=solucion[j]
-               solucion.insert(j,datos[i])
+            if self[i]<=solucion[j]
+               solucion.insert(j,self[i])
                break
             end
             
             if j==solucion.length-1
-               solucion << datos[i]
+               solucion << self[i]
             end
          end
        end
@@ -119,11 +119,11 @@ class Array
 	#
 	# @param datos array que contiene los alimentos que deben ser ordenados según su valor energético.
 	# @return Un nuevo array con los datos ordenados según el valor energético.
-   def ordenar_each(datos)
+   def ordenar_each
       solucion=Array.new
-      solucion << datos[0]
+      solucion << self[0]
       
-      datos.drop(1).each do |val_1|
+      self.drop(1).each do |val_1|
          solucion.each_with_index do |val_2,i|
             if val_1<=val_2
                solucion.insert(i,val_1)
